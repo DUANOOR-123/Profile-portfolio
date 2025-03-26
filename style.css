@@ -1,0 +1,327 @@
+/* === GENERAL STYLES === */
+body {
+    font-family: "Oswald", sans-serif;
+    margin: 0 20px;
+    padding: 0;
+}
+
+/* === NAVIGATION BAR === */
+.info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* Space out logo and nav links */
+    margin: 20px;
+    position: relative;
+}
+
+.info h1 {
+    margin: 0;
+}
+
+.first {
+    margin-right: 100px;
+    /* Increased space after logo */
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    margin-right: 40px;
+    /* Reduced space between nav items */
+}
+
+.nav-links a:last-child {
+    margin-right: 0;
+    /* Remove margin from last item */
+}
+
+/* For mobile screens */
+@media screen and (max-width: 768px) {
+    .info {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .first {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .nav-links a {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+
+/* For screens 768px to 1000px */
+@media screen and (min-width: 769px) and (max-width: 999px) {
+    .nav-links a {
+        margin-right: 30px;
+        /* Less space on medium screens */
+    }
+}
+
+/* For screens larger than 1000px */
+@media screen and (min-width: 1000px) {
+    .nav-links a {
+        margin-right: 40px;
+        /* Adjusted space for larger screens */
+    }
+}
+
+/* === ABOUT SECTION === */
+.about {
+    display: flex;
+    margin: 20px;
+    align-items: center;
+}
+
+.pic {
+    height: 450px;
+    width: 450px;
+    border-radius: 50%;
+    border: 10px solid purple;
+    display: none;
+    /* Hidden by default */
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+}
+
+.text-container {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.text-container .button {
+    margin-top: 20px;
+}
+
+.font {
+    font-family: "Pacifico", cursive;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+/* Show profile image on screens > 1200px */
+@media screen and (min-width: 1200px) {
+    .pic {
+        display: block;
+        margin-left: 40px;
+        /* Space between text and image */
+    }
+}
+
+/* === BOXES IN ABOUT SECTION === */
+.second {
+    text-align: center;
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin: 0 20px;
+}
+
+.hobbies,
+.interests,
+.projects {
+    width: 100%;
+    height: auto;
+    border: 10px solid purple;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    position: relative;
+}
+
+.hobbies a,
+.interests a,
+.projects a {
+    margin-top: 20px;
+}
+
+.tabfont {
+    font-size: 16px;
+}
+
+@media screen and (min-width: 768px) {
+    .tabfont {
+        font-size: 18px;
+    }
+}
+
+/* === EDUCATION SECTION === */
+.third {
+    margin: 20px auto;
+    border: 10px solid purple;
+    font-size: 18px;
+    width: 90%;
+    max-width: 1200px;
+    /* Increased width for larger screens */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.third-text {
+    margin: 10px;
+    text-align: left;
+}
+
+@media screen and (min-width: 1200px) {
+    .third {
+        width: 80%;
+    }
+}
+
+/* === CONTACT SECTION === */
+.icon {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 10px;
+    justify-content: center;
+}
+
+.icon-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+
+.icon-small {
+    font-size: 40px;
+    color: plum;
+    animation: beat 1.5s infinite;
+}
+
+@keyframes beat {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+.icon-name {
+    font-size: 16px;
+    text-align: center;
+    text-decoration-line: none;
+}
+
+/* Larger icons for bigger screens */
+@media screen and (min-width: 1000px) {
+    .icon-small {
+        font-size: 80px;
+        /* Larger icons for screens > 1000px */
+    }
+
+    .icon-name {
+        font-size: 18px;
+        /* Increased text size for icon names */
+    }
+}
+
+/* === BUTTON STYLES === */
+.button {
+    background-color: #ae1494;
+    color: rgb(175, 105, 175);
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+    margin-top: 10px;
+font-family: "Acme", sans-serif;
+    font-weight: bold;
+}
+
+.button:hover {
+    background-color: plum;
+    transform: scale(1.05);
+}
+
+/* === TYPOGRAPHY === */
+.tabs {
+    font-size: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.last h1 {
+    font-family: "Pacifico", cursive;
+    font-weight: bold;
+    font-size: 70px;
+    text-align: center;
+}
+.nav-links
+{
+    font-family: "Acme", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 27px;
+}
+.tabfont
+{
+    font-family: Signika Negative, sans-serif;
+    font-size: 30px;
+}
+.body
+{
+    margin: 0%;
+    padding: 0%;
+}
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    margin-right: 40px;
+    font-size: 24px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: purple;
+    /* Change color on hover */
+    transform: scale(1.1);
+    /* Slightly increase size */
+}
+@keyframes exampleAnimation {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.2);
+    }
+}
+
+.last:hover {
+    animation: exampleAnimation 0.5s ease-in-out forwards;
+}
